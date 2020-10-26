@@ -51,14 +51,42 @@ $breakpoint-lg: 717px;
     width: 100%;
     height: 300px;
     margin-top: -10px;
-    @include sm-md-xl {
-      height: 400px;
-    }
   }
 
   & .grow-logo {
     width: 214px;
     margin-top: 20px;
+  }
+
+  & #chart-container-1 {
+    .highcharts-yaxis-labels {
+      fill: $slate-secondary-5;
+      // use this to change the axis label
+      & span:last-child {
+        transform: translate (10px,0) !important;
+        &:after {
+          content: "%";
+      }
+      }
+    }
+    .highcharts-point {
+      &:nth-child(2), &:nth-child(4), &:nth-child(5), &:last-child {
+        fill: $purple-primary;
+        stroke: $purple-primary;
+      }
+    }
+    .highcharts-data-label {
+      &:nth-child(9) {
+        & text {
+          transform: translate(0,20px)
+        }
+      }
+      &:last-child {
+        & text {
+          transform: translate(0,-20px)
+        }
+      }
+    }
   }
   
 }

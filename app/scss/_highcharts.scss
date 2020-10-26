@@ -84,11 +84,6 @@
   .highcharts-yaxis-labels {
     fill: $slate-secondary-5;
     // use this to change the axis label
-    & span:first-child {
-      &:after {
-        content: "%";
-    }
-    }
   }
   
   .highcharts-grid-line {
@@ -205,13 +200,13 @@
   /* Series options */
   /* Default colors */
   .highcharts-color-0 {
-    fill: $green-primary;
-    stroke: $green-primary;
+    fill: $yellow-secondary-3;
+    stroke: $yellow-secondary-3;
   }
   
   .highcharts-color-1 {
-    fill: $slate-secondary-3;
-    stroke: $slate-secondary-3;
+    fill: $purple-primary;
+    stroke: $purple-primary;
   }
   
   .highcharts-color-2 {
