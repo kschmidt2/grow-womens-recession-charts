@@ -59,6 +59,7 @@ $breakpoint-lg: 717px;
   }
 
   & #chart-container-1 {
+    margin-top: -50px;
     .highcharts-point {
       &:nth-child(2), &:nth-child(4), &:nth-child(5), &:last-child {
         fill: $purple-primary;
@@ -90,7 +91,69 @@ $breakpoint-lg: 717px;
     .highcharts-yaxis-labels {
       // use this to change the axis label
       & span:last-child {
+        // transform: translate(10px,0) !important;
+        &:after {
+          content: "%";
+      }
+      }
+    }
+  }
+
+  & #chart-container-3 {
+    @include x-small(){
+      margin-bottom: 40px;
+    }
+    .highcharts-grid-line {
+      &:nth-child(5) {
+        stroke: black;
+      }
+    }
+    .highcharts-axis-line {
+      display: none;
+    }
+  }
+
+  & #chart-container-4 {
+    @include x-small() {
+      height: 400px;
+    }
+    .highcharts-color-0 {
+      fill: $slate-secondary-3;
+      stroke: $slate-secondary-3;
+    }
+    .highcharts-color-1 {
+      fill: $slate-secondary-4;
+      stroke: $slate-secondary-4;
+    }
+    .highcharts-color-2 {
+      fill: $purple-secondary-3;
+      stroke: $purple-secondary-3;
+    }
+    .highcharts-color-3 {
+      fill: $purple-secondary-5;
+      stroke: $purple-secondary-5;
+    }
+    .highcharts-yaxis-labels {
+      // use this to change the axis label
+      & span:last-child {
         transform: translate(10px,0) !important;
+        &:after {
+          content: "%";
+      }
+      }
+    }
+  }
+
+  & #chart-container-5 {
+    @include x-small(){
+      height: 450px;
+      & .highcharts-axis-labels {
+        background-color: white;
+      }
+    }
+    .highcharts-yaxis-labels {
+      // use this to change the axis label
+      & span:first-child {
         &:after {
           content: "%";
       }
@@ -100,4 +163,4 @@ $breakpoint-lg: 717px;
   
 }
 
-// @import "social";
+@import "social";
